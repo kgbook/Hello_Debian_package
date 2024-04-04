@@ -35,7 +35,6 @@ gen_deb_project_name() {
 }
 
 gen_deb() {
-  deb_project_name=$(gen_deb_project_name)
   deb_filename=${PROJECT_NAME}_${VERSION}.deb
   gen_deb_tool=$(which dpkg-deb)
   if [[ -x ${gen_deb_tool} ]]; then
