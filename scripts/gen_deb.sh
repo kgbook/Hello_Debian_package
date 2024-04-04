@@ -34,7 +34,7 @@ gen_deb_project_name() {
   echo "${deb_project_name}"
 }
 
-gen_deb() {
+gen_deb_package() {
   deb_filename=${PROJECT_NAME}_${VERSION}.deb
   gen_deb_tool=$(which dpkg-deb)
   if [[ -x ${gen_deb_tool} ]]; then
@@ -46,4 +46,4 @@ gen_deb() {
 }
 
 gen_deb_control_info
-gen_deb
+gen_deb_package
